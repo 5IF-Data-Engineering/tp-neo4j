@@ -1,0 +1,13 @@
+.obsidian
+.obsidian/*
+./todos
+
+out.md
+out.markdown
+
+*.slide.md
+SLIDES.md
+
+obsidian.css
+.ipynb_checkpoints
+neo4j

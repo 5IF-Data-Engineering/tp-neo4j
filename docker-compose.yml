@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  neo:
+    image: neo4j
+    ports:
+        - 7474:7474
+        - 7687:7687
+    restart: always
+    environment:
+      - NEO4J_AUTH=neo4j/password
+    volumes:
+      - ./neo4j/data:/data
+  notebook:
+    image: tp-mongodb-notebook:latest
+    ports:
+      - 8888:8888
+    volumes:
+       - ./:/home/jovyan/work/data
+    environment:
+      - GRANT_SUDO=yes
